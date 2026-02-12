@@ -33,6 +33,8 @@ The goal of this playbook is to:
 
 ## Getting Started
 
+👉 **New here?** Check out the [Quick Start Guide](./QUICK_START.md) for a guided tour!
+
 Each section contains:
 - **README.md**: Overview and key concepts
 - **Examples**: Practical code samples and implementations
