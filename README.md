@@ -1,5 +1,8 @@
 # AI Engineering Playbook
 
+![Status](https://img.shields.io/badge/status-active-success)
+![Focus](https://img.shields.io/badge/focus-applied%20AI%20engineering-blue)
+
 ## Overview
 
 This repository contains my personal engineering notes and applied experiments in AI and modern .NET systems.
@@ -59,6 +62,16 @@ The repository is organized by domains:
 - `ai/` → RAG, embeddings, prompt design, orchestration  
 - `azure/` → Cloud-native AI integration  
 - `snippets/` → Reusable production-ready code examples  
+
+---
+
+## Current Focus (2026)
+
+- Applied AI integration in .NET systems
+- Azure OpenAI and enterprise-ready patterns
+- Retrieval-Augmented Generation (RAG)
+- Production-oriented architecture decisions
+- Performance and concurrency discipline
 
 ---
 
