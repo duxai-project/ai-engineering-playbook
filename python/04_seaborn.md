@@ -1,4 +1,4 @@
-﻿# Seaborn – Quick Memory (Command + Output)
+# Seaborn � Quick Memory (Command + Output)
 
 Note: Some outputs may vary (rendered plots, palettes). Some functions shown below are deprecated in newer Seaborn versions; see the "Deprecated vs New" section.
 
@@ -8,20 +8,20 @@ Seaborn is a statistical visualization library built on Matplotlib. It provides 
 Import Seaborn and helpers, then load sample datasets used throughout.
 
 ```python
->>> import seaborn as sns
->>> import matplotlib.pyplot as plt
->>> %matplotlib inline
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
 ```
 
 Note: If you are using Jupyter/Colab, `%matplotlib inline` shows plots inside the notebook.
 
 ```python
->>> tips = sns.load_dataset('tips')
->>> tips.head()
+tips = sns.load_dataset('tips')
+tips.head()
 ```
 
 ```python
->>> flights = sns.load_dataset('flights')
+flights = sns.load_dataset('flights')
 ```
 
 ---
@@ -30,21 +30,21 @@ Note: If you are using Jupyter/Colab, `%matplotlib inline` shows plots inside th
 Visualize numeric distributions with histograms, KDEs, and rug plots.
 
 ```python
->>> sns.distplot(tips['total_bill'])
+sns.distplot(tips['total_bill'])
 # Deprecated: use histplot/kdeplot or displot
 ```
 
 ```python
->>> sns.distplot(tips['total_bill'], kde=False, bins=30)
+sns.distplot(tips['total_bill'], kde=False, bins=30)
 ```
 
 ```python
->>> sns.kdeplot(tips['total_bill'])
->>> sns.rugplot(tips['total_bill'])
+sns.kdeplot(tips['total_bill'])
+sns.rugplot(tips['total_bill'])
 ```
 
 ```python
->>> sns.rugplot(tips['tip'])
+sns.rugplot(tips['tip'])
 ```
 
 **Modern equivalents:**
@@ -58,23 +58,23 @@ Visualize numeric distributions with histograms, KDEs, and rug plots.
 Explore relationships between variables with combined or multi-plot views.
 
 ```python
->>> sns.jointplot(x='total_bill', y='tip', data=tips, kind='scatter')
+sns.jointplot(x='total_bill', y='tip', data=tips, kind='scatter')
 ```
 
 ```python
->>> sns.jointplot(x='total_bill', y='tip', data=tips, kind='hex')
+sns.jointplot(x='total_bill', y='tip', data=tips, kind='hex')
 ```
 
 ```python
->>> sns.jointplot(x='total_bill', y='tip', data=tips, kind='reg')
+sns.jointplot(x='total_bill', y='tip', data=tips, kind='reg')
 ```
 
 ```python
->>> sns.pairplot(tips)
+sns.pairplot(tips)
 ```
 
 ```python
->>> sns.pairplot(tips, hue='sex', palette='coolwarm')
+sns.pairplot(tips, hue='sex', palette='coolwarm')
 ```
 
 ---
@@ -83,27 +83,27 @@ Explore relationships between variables with combined or multi-plot views.
 Use figure-level functions for fast, consistent faceting and small multiples.
 
 ```python
->>> sns.relplot(data=tips, x='total_bill', y='tip', hue='sex', kind='scatter')
+sns.relplot(data=tips, x='total_bill', y='tip', hue='sex', kind='scatter')
 ```
 
 ```python
->>> sns.relplot(data=tips, x='total_bill', y='tip', col='time', row='smoker', kind='scatter')
+sns.relplot(data=tips, x='total_bill', y='tip', col='time', row='smoker', kind='scatter')
 ```
 
 ```python
->>> sns.catplot(data=tips, x='day', y='total_bill', hue='sex', kind='box')
+sns.catplot(data=tips, x='day', y='total_bill', hue='sex', kind='box')
 ```
 
 ```python
->>> sns.displot(data=tips, x='total_bill', kind='hist')
+sns.displot(data=tips, x='total_bill', kind='hist')
 ```
 
 ```python
->>> sns.displot(data=tips, x='total_bill', kind='kde')
+sns.displot(data=tips, x='total_bill', kind='kde')
 ```
 
 ```python
->>> sns.displot(data=tips, x='total_bill', kind='ecdf')
+sns.displot(data=tips, x='total_bill', kind='ecdf')
 ```
 
 ---
@@ -112,57 +112,57 @@ Use figure-level functions for fast, consistent faceting and small multiples.
 Compare categories with summary stats and distribution-focused plots.
 
 ```python
->>> sns.barplot(x='sex', y='total_bill', data=tips)
+sns.barplot(x='sex', y='total_bill', data=tips)
 ```
 
 ```python
->>> import numpy as np
->>> sns.barplot(x='sex', y='total_bill', data=tips, estimator=np.std)
+import numpy as np
+sns.barplot(x='sex', y='total_bill', data=tips, estimator=np.std)
 ```
 
 ```python
->>> sns.countplot(x='sex', data=tips)
+sns.countplot(x='sex', data=tips)
 ```
 
 ```python
->>> sns.boxplot(x='day', y='total_bill', data=tips, palette='rainbow')
+sns.boxplot(x='day', y='total_bill', data=tips, palette='rainbow')
 ```
 
 ```python
->>> sns.boxplot(data=tips, palette='rainbow', orient='h')
+sns.boxplot(data=tips, palette='rainbow', orient='h')
 ```
 
 ```python
->>> sns.boxplot(x='day', y='total_bill', hue='smoker', data=tips, palette='coolwarm')
+sns.boxplot(x='day', y='total_bill', hue='smoker', data=tips, palette='coolwarm')
 ```
 
 ```python
->>> sns.violinplot(x='day', y='total_bill', data=tips, palette='rainbow')
+sns.violinplot(x='day', y='total_bill', data=tips, palette='rainbow')
 ```
 
 ```python
->>> sns.violinplot(x='day', y='total_bill', data=tips, hue='sex', split=True, palette='Set1')
+sns.violinplot(x='day', y='total_bill', data=tips, hue='sex', split=True, palette='Set1')
 ```
 
 ```python
->>> sns.stripplot(x='day', y='total_bill', data=tips, jitter=True)
+sns.stripplot(x='day', y='total_bill', data=tips, jitter=True)
 ```
 
 ```python
->>> sns.stripplot(x='day', y='total_bill', data=tips, jitter=True, hue='sex', palette='Set1', split=True)
+sns.stripplot(x='day', y='total_bill', data=tips, jitter=True, hue='sex', palette='Set1', split=True)
 ```
 
 ```python
->>> sns.swarmplot(x='day', y='total_bill', data=tips)
+sns.swarmplot(x='day', y='total_bill', data=tips)
 ```
 
 ```python
->>> sns.swarmplot(x='day', y='total_bill', hue='sex', data=tips, palette='Set1', split=True)
+sns.swarmplot(x='day', y='total_bill', hue='sex', data=tips, palette='Set1', split=True)
 ```
 
 ```python
->>> sns.violinplot(x='tip', y='day', data=tips, palette='rainbow')
->>> sns.swarmplot(x='tip', y='day', data=tips, color='black', size=3)
+sns.violinplot(x='tip', y='day', data=tips, palette='rainbow')
+sns.swarmplot(x='tip', y='day', data=tips, color='black', size=3)
 ```
 
 **Modern equivalent of factorplot:**
@@ -174,28 +174,28 @@ Compare categories with summary stats and distribution-focused plots.
 Show matrix-like data such as correlations or pivots with heatmaps.
 
 ```python
->>> sns.heatmap(tips.corr())
+sns.heatmap(tips.corr())
 ```
 
 ```python
->>> sns.heatmap(tips.corr(), cmap='coolwarm', annot=True)
+sns.heatmap(tips.corr(), cmap='coolwarm', annot=True)
 ```
 
 ```python
->>> pvflights = flights.pivot_table(values='passengers', index='month', columns='year')
->>> sns.heatmap(pvflights)
+pvflights = flights.pivot_table(values='passengers', index='month', columns='year')
+sns.heatmap(pvflights)
 ```
 
 ```python
->>> sns.heatmap(pvflights, cmap='magma', linecolor='white', linewidths=1)
+sns.heatmap(pvflights, cmap='magma', linecolor='white', linewidths=1)
 ```
 
 ```python
->>> sns.clustermap(pvflights)
+sns.clustermap(pvflights)
 ```
 
 ```python
->>> sns.clustermap(pvflights, cmap='coolwarm', standard_scale=1)
+sns.clustermap(pvflights, cmap='coolwarm', standard_scale=1)
 ```
 
 ---
@@ -204,51 +204,51 @@ Show matrix-like data such as correlations or pivots with heatmaps.
 Build multi-plot layouts and customize how each subplot is drawn.
 
 ```python
->>> iris = sns.load_dataset('iris')
->>> g = sns.PairGrid(iris)
+iris = sns.load_dataset('iris')
+g = sns.PairGrid(iris)
 ```
 
 ```python
->>> g = sns.PairGrid(iris)
->>> g.map(plt.scatter)
+g = sns.PairGrid(iris)
+g.map(plt.scatter)
 ```
 
 ```python
->>> g = sns.PairGrid(iris)
->>> g.map_diag(plt.hist)
->>> g.map_upper(plt.scatter)
->>> g.map_lower(sns.kdeplot)
+g = sns.PairGrid(iris)
+g.map_diag(plt.hist)
+g.map_upper(plt.scatter)
+g.map_lower(sns.kdeplot)
 ```
 
 ```python
->>> sns.pairplot(iris)
+sns.pairplot(iris)
 ```
 
 ```python
->>> sns.pairplot(iris, hue='species', palette='rainbow')
+sns.pairplot(iris, hue='species', palette='rainbow')
 ```
 
 ```python
->>> g = sns.FacetGrid(tips, col='time', row='smoker')
+g = sns.FacetGrid(tips, col='time', row='smoker')
 ```
 
 ```python
->>> g = sns.FacetGrid(tips, col='time', row='smoker')
->>> g.map(plt.hist, 'total_bill')
+g = sns.FacetGrid(tips, col='time', row='smoker')
+g.map(plt.hist, 'total_bill')
 ```
 
 ```python
->>> g = sns.FacetGrid(tips, col='time', row='smoker', hue='sex')
->>> g.map(plt.scatter, 'total_bill', 'tip').add_legend()
+g = sns.FacetGrid(tips, col='time', row='smoker', hue='sex')
+g.map(plt.scatter, 'total_bill', 'tip').add_legend()
 ```
 
 ```python
->>> g = sns.JointGrid(x='total_bill', y='tip', data=tips)
+g = sns.JointGrid(x='total_bill', y='tip', data=tips)
 ```
 
 ```python
->>> g = sns.JointGrid(x='total_bill', y='tip', data=tips)
->>> g.plot(sns.regplot, sns.distplot)
+g = sns.JointGrid(x='total_bill', y='tip', data=tips)
+g.plot(sns.regplot, sns.distplot)
 # distplot is deprecated
 ```
 
@@ -258,38 +258,38 @@ Build multi-plot layouts and customize how each subplot is drawn.
 Fit and visualize linear relationships, with grouping and faceting.
 
 ```python
->>> sns.lmplot(x='total_bill', y='tip', data=tips)
+sns.lmplot(x='total_bill', y='tip', data=tips)
 ```
 
 ```python
->>> sns.lmplot(x='total_bill', y='tip', data=tips, hue='sex')
+sns.lmplot(x='total_bill', y='tip', data=tips, hue='sex')
 ```
 
 ```python
->>> sns.lmplot(x='total_bill', y='tip', data=tips, hue='sex', palette='coolwarm')
+sns.lmplot(x='total_bill', y='tip', data=tips, hue='sex', palette='coolwarm')
 ```
 
 ```python
->>> sns.lmplot(
+sns.lmplot(
 ...     x='total_bill', y='tip', data=tips, hue='sex', palette='coolwarm',
 ...     markers=['o', 'v'], scatter_kws={'s': 100}
 ... )
 ```
 
 ```python
->>> sns.lmplot(x='total_bill', y='tip', data=tips, col='sex')
+sns.lmplot(x='total_bill', y='tip', data=tips, col='sex')
 ```
 
 ```python
->>> sns.lmplot(x='total_bill', y='tip', data=tips, row='sex', col='time')
+sns.lmplot(x='total_bill', y='tip', data=tips, row='sex', col='time')
 ```
 
 ```python
->>> sns.lmplot(x='total_bill', y='tip', data=tips, col='day', hue='sex', palette='coolwarm')
+sns.lmplot(x='total_bill', y='tip', data=tips, col='day', hue='sex', palette='coolwarm')
 ```
 
 ```python
->>> sns.lmplot(
+sns.lmplot(
 ...     x='total_bill', y='tip', data=tips, col='day', hue='sex', palette='coolwarm',
 ...     aspect=0.6, size=8
 ... )
@@ -301,41 +301,41 @@ Fit and visualize linear relationships, with grouping and faceting.
 Control global look-and-feel, palettes, contexts, and figure sizing.
 
 ```python
->>> sns.countplot(x='sex', data=tips)
+sns.countplot(x='sex', data=tips)
 ```
 
 ```python
->>> sns.set_style('white')
->>> sns.countplot(x='sex', data=tips)
+sns.set_style('white')
+sns.countplot(x='sex', data=tips)
 ```
 
 ```python
->>> sns.set_style('ticks')
->>> sns.countplot(x='sex', data=tips, palette='deep')
+sns.set_style('ticks')
+sns.countplot(x='sex', data=tips, palette='deep')
 ```
 
 ```python
->>> sns.countplot(x='sex', data=tips)
->>> sns.despine()
+sns.countplot(x='sex', data=tips)
+sns.despine()
 ```
 
 ```python
->>> sns.countplot(x='sex', data=tips)
->>> sns.despine(left=True)
+sns.countplot(x='sex', data=tips)
+sns.despine(left=True)
 ```
 
 ```python
->>> plt.figure(figsize=(12, 3))
->>> sns.countplot(x='sex', data=tips)
+plt.figure(figsize=(12, 3))
+sns.countplot(x='sex', data=tips)
 ```
 
 ```python
->>> sns.lmplot(x='total_bill', y='tip', data=tips, size=2, aspect=4)
+sns.lmplot(x='total_bill', y='tip', data=tips, size=2, aspect=4)
 ```
 
 ```python
->>> sns.set_context('poster', font_scale=4)
->>> sns.countplot(x='sex', data=tips, palette='coolwarm')
+sns.set_context('poster', font_scale=4)
+sns.countplot(x='sex', data=tips, palette='coolwarm')
 ```
 
 ---
@@ -344,8 +344,8 @@ Control global look-and-feel, palettes, contexts, and figure sizing.
 Compose complex plots with a more consistent, Matplotlib-like API.
 
 ```python
->>> from seaborn import objects as so
->>> (
+from seaborn import objects as so
+(
 ...   so.Plot(tips, x='total_bill', y='tip', color='sex')
 ...   .add(so.Dot())
 ...   .add(so.Line(), so.PolyFit())
@@ -383,4 +383,5 @@ Practical tips for using Seaborn effectively in modern workflows.
 - **Mind deprecations**: avoid `distplot` and `factorplot` in new code.
 - **Set themes once**: call `sns.set_theme()` (or `set_style`/`set_context`) at the top of a notebook/script.
 - **Control legends**: use `hue` for grouping, and consider `legend=False` when cluttered.
+
 
