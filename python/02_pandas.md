@@ -4,6 +4,8 @@ Note: Some outputs may vary (platform-dependent dtypes).
 
 Pandas is built for working with tabular data (rows and columns). Use it for data cleaning, analysis, joins, time series, and preparing datasets for modeling or visualization.
 
+Related: For plotting with Pandas, see [`02_pandas_plots.md`](02_pandas_plots.md).
+
 ## Creating Series
 
 Build 1D labeled arrays and basic access patterns.
@@ -807,6 +809,7 @@ Core takeaways to remember when working with Pandas.
 - **axis=0 for rows, axis=1 for columns.**
 - **Chaining:** Many operations can be chained: `df.groupby().sum().sort_values()`
 - **Inplace:** Most methods return a new DataFrame; use `inplace=True` to modify in place.
+
 
 
 

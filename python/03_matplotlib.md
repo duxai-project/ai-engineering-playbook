@@ -17,7 +17,7 @@ Create a simple line plot and show the figure.
 >>> plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 >>> plt.show()
 ```
-<img src="img/03_matplotlib/01.png" alt="Mi chart" width="500" />
+<img src="img/03_matplotlib/01.png" alt="Mi chart" width="400" />
 
 ```python
 >>> # With labels and title
@@ -27,6 +27,7 @@ Create a simple line plot and show the figure.
 >>> plt.title('Simple Line Plot')
 >>> plt.show()
 ```
+<img src="img/03_matplotlib/02.png" alt="Mi chart" width="400" />
 
 ---
 
@@ -37,8 +38,8 @@ Style lines with colors, markers, and line types.
 ```python
 >>> plt.plot([1, 2, 3, 4], [1, 4, 9, 16], color='red', linewidth=2, linestyle='--', marker='o')
 >>> plt.show()
-(Red dashed line with circle markers)
 ```
+<img src="img/03_matplotlib/03.png" alt="Mi chart" width="400" />
 
 **Common options:**
 - `color`: 'r', 'g', 'b', 'cyan', 'magenta', '#FF5733'
@@ -53,6 +54,7 @@ Style lines with colors, markers, and line types.
 >>> plt.plot([1, 2, 3], [1, 4, 9], 'ro--')  # red, circles, dashed
 >>> plt.show()
 ```
+<img src="img/03_matplotlib/04.png" alt="Mi chart" width="400" />
 
 ---
 
