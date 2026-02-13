@@ -67,8 +67,8 @@ Plot multiple series and add legends.
 >>> plt.plot([1, 2, 3], [2, 5, 10], label='Line 2')
 >>> plt.legend()
 >>> plt.show()
-(Two lines with legend)
 ```
+<img src="img/03_matplotlib/05.png" alt="Mi chart" width="400" />
 
 ```python
 >>> # Multiple lines at once
@@ -78,6 +78,7 @@ Plot multiple series and add legends.
 >>> plt.plot(x, y1, 'r-', x, y2, 'b--')
 >>> plt.show()
 ```
+<img src="img/03_matplotlib/06.png" alt="Mi chart" width="400" />
 
 ---
 
@@ -89,6 +90,7 @@ Visualize relationships between two variables.
 >>> plt.scatter([1, 2, 3, 4], [1, 4, 9, 16])
 >>> plt.show()
 ```
+<img src="img/03_matplotlib/07.png" alt="Mi chart" width="400" />
 
 ```python
 >>> # With size and color
@@ -98,6 +100,7 @@ Visualize relationships between two variables.
 >>> plt.colorbar()  # Show color scale
 >>> plt.show()
 ```
+<img src="img/03_matplotlib/08.png" alt="Mi chart" width="400" />
 
 ---
 
@@ -111,12 +114,14 @@ Compare categories with vertical or horizontal bars.
 >>> plt.bar(categories, values)
 >>> plt.show()
 ```
+<img src="img/03_matplotlib/09.png" alt="Mi chart" width="400" />
 
 ```python
 >>> # Horizontal bar
 >>> plt.barh(categories, values, color='teal')
 >>> plt.show()
 ```
+<img src="img/03_matplotlib/10.png" alt="Mi chart" width="400" />
 
 ```python
 >>> # With customization
@@ -125,6 +130,7 @@ Compare categories with vertical or horizontal bars.
 >>> plt.title('Bar Chart')
 >>> plt.show()
 ```
+<img src="img/03_matplotlib/11.png" alt="Mi chart" width="400" />
 
 ---
 
